@@ -1,4 +1,4 @@
-package com.cnki;
+package com.example.demo.cnki;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

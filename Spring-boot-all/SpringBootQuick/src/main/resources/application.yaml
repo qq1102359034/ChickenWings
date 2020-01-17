@@ -1,0 +1,24 @@
+#server:
+#  port: 8082
+#profiles:
+#  active:
+##last-name:
+##lastName:
+#person:
+#  last-name: wyw
+#  age: 23
+#  boss: true
+#  birth: 1997/10/01
+#  maps: {k1: v1,k2: v2}
+#  lists:
+#    - wyw
+#    - lq
+#  dog:
+#    name: dog
+#    age: 2
+#
+#---
+#server:
+#  port: 8083
+#profiles: dev
+#
