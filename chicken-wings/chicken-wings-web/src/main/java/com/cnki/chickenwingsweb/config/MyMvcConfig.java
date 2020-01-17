@@ -14,19 +14,15 @@ import java.util.Locale;
 
 @Configuration
 public class MyMvcConfig extends WebMvcConfigurerAdapter {
-
-
     @Override
     public void addViewControllers(ViewControllerRegistry registry){
         registry.addViewController("/test").setViewName("/index");
     }
-
     @Bean
     public WebMvcConfigurerAdapter webMvc(){
         WebMvcConfigurerAdapter adapter = new WebMvcConfigurerAdapter() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/test").setViewName("index");
                 registry.addViewController("/lyear_pages_login.html").setViewName("index");
             }
         };
@@ -38,18 +34,3 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
         return new MyLocaleResolver();
     }
 }
-//public static class EnableWebMvcConfiguration extends DelegatingWebMvcConfiguration
-
-/**
- *
- *  public void addViewControllers(ViewControllerRegistry registry) {
- *         Iterator var2 = this.delegates.iterator();
- *
- *         while(var2.hasNext()) {
- *             WebMvcConfigurer delegate = (WebMvcConfigurer)var2.next();
- *             delegate.addViewControllers(registry);
- *         }
- *
- *     }
- *
- */
