@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>访问首页!</h1>
+<!-- th:text 设置div文本内容 -->
+<div id="div01" class="myDiv" th:id="${hello}" th:class="${hello}" th:text="${hello}">欢迎来到首页!</div>
+<hr/>
+    <!-- 特殊字符转义 -->
+<div th:text="${hello}"></div>
+    <!-- 不会转义特殊字符 -->
+<div th:utext="${hello}"></div>
+<!-- th:each 每次遍历都会生成当前这个标签 -->
+    <h4 th:text="${user}" th:each="user:${user}"></h4>
+<hr/>
+<h4>
+    <!-- 特殊字符转义 -->
+    <span th:each="user:${user}"> [[${user}]] - </span>
+    <!-- 不会转义特殊字符 -->
+    <span th:each="user:${user}">- [(${user})] </span>
+</h4>
+
+</body>
+</html>
