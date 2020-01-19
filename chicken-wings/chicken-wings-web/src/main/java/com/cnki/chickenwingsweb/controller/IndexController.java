@@ -7,10 +7,10 @@ import java.util.Arrays;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/index")
 public class IndexController {
 
-    @RequestMapping("/index")
+    @RequestMapping("")
     public String index(){
         //classpath:/templates/index.html
         return "index";
