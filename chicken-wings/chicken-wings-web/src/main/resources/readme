@@ -1,0 +1,23 @@
+
+RestfulCRUD: curd满足Rest风格
+      普通crud(uri区分)         restfulcrud
+查询  getEmp                    emp--GET
+添加  addEmp?xxx                emp--POST
+修改  updateEmp?id=xxx&xxx      emp--PUT
+删除  deleteEmp?id=1            emp--DELETE
+
+
+1.查询所有员工
+emps GET
+2.查询某个员工
+emp/1 GET
+3.来到添加页面
+emps GET
+4.添加员工
+emps POST
+5.来到修改页面
+emps GET
+6.修改员工
+emps PUT
+7.删除员工
+emps DELETE
