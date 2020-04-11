@@ -12,6 +12,7 @@
     <bytecodeTargetLevel>
       <module name="chicken-wings" target="1.8" />
       <module name="chicken-wings-web" target="1.8" />
+      <module name="springboot04webrestfulcrud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
