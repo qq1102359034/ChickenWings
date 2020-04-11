@@ -6,6 +6,19 @@ import javax.persistence.*;
 @Entity
 @Table(name = "book_lyear")
 public class Books {
+    public Books(int id, String title, String book, String author, int readnum, String state, String time) {
+        this.id=id;
+        this.readnum = readnum;
+        this.title = title;
+        this.book = book;
+        this.author = author;
+        this.state = state;
+        this.time = time;
+    }
+
+    public Books(int id){
+        this.id=id;
+    }
     @Id
     @GeneratedValue
     private int id;

@@ -1,27 +1,26 @@
 package com.cnki.chickenwingsweb.controller.system.book;
 
 
-import com.cnki.chickenwingsweb.service.system.book.BookService;
+import com.cnki.chickenwingsweb.dao.system.book.BookDao;
+import com.cnki.chickenwingsweb.entities.Books;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.Collection;
 
 @Controller
 @RequestMapping("/systembook")
 public class BookController {
-   /* @Autowired
-    BookService bookService;*/
+   @Autowired
+   BookDao bookDao;
     @RequestMapping("/list")
-    public String findCities() {
+    public String findCities(Model model) {
+        Collection<Books> bookAll = bookDao.getBookAll();
 
-     /*   List<BookService> books = (List<BookService>) bookService.findAll();
-
-        params.put("books", books);*/
-
-        return "";
+        //放在请求域中
+        model.addAttribute("bookAll",bookAll);
+        return "lyear_pages_doc.html";
     }
 }
