@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
-public class loginController {
+public class LoginController {
     @RequestMapping(value = "/")
     public String logins() {
         return "lyear_pages_login";//lyear_pages_login.html
