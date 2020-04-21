@@ -1,5 +1,6 @@
 package com.cnki.chickenwingsweb.entities.simple;
 
+
 import java.util.Date;
 
 public class Employee {

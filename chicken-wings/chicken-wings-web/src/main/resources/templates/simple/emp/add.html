@@ -45,12 +45,12 @@
 	<body>
 		<!--引入抽取的topbar-->
 		<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
-		<div th:replace="commons/bar::topbar"></div>
+		<div th:replace="simple/commons/bar::topbar"></div>
 
 		<div class="container-fluid">
 			<div class="row">
 				<!--引入侧边栏-->
-				<div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
+				<div th:replace="simple/commons/bar::#sidebar(activeUri='emps')"></div>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					<!--需要区分是员工修改还是添加；-->
@@ -91,7 +91,7 @@
 						</div>
 						<div class="form-group">
 							<label>Birth</label>
-							<input name="birth" type="text" class="form-control" placeholder="zhangsan" th:value="${emp!=null}?${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}">
+							<input name="birth" type="text" class="form-control" placeholder="2019/10/01" th:value="${emp!=null}?${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}">
 						</div>
 						<button type="submit" class="btn btn-primary" th:text="${emp!=null}?'修改':'添加'">添加</button>
 					</form>

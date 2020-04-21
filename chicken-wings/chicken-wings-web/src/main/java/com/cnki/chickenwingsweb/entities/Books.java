@@ -15,15 +15,24 @@ public class Books {
         this.state = state;
         this.time = time;
     }
+//"8","一个女长年的故事","《莫泊桑短篇小说集》","莫泊桑",36,"正常"
+    public Books(int id, String title, String book, String author, int readnum, String state) {
+        this.id=id;
+        this.readnum = readnum;
+        this.title = title;
+        this.book = book;
+        this.author = author;
+        this.state = state;
+    }
 
     public Books(int id){
         this.id=id;
     }
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     @Column(nullable = false)
-    private int readnum;
+    private Integer readnum;
     @Column(nullable = false)
     private String title;
     @Column(nullable = false)
@@ -31,7 +40,7 @@ public class Books {
     @Column(nullable = false)
     private String  author;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

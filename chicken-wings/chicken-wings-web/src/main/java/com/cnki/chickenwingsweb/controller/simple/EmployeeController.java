@@ -37,7 +37,7 @@ public class EmployeeController {
         //来到添加页面,查出所有的部门，在页面显示
         Collection<Department> departments = departmentDao.getDepartments();
         model.addAttribute("depts",departments);
-        return "simple/emp/add";
+        return "simple/emp/add.html";
     }
 
     //员工添加
@@ -45,13 +45,12 @@ public class EmployeeController {
     @PostMapping("/emp")
     public String addEmp(Employee employee){
         //来到员工列表页面
-
         System.out.println("保存的员工信息："+employee);
         //保存员工
         employeeDao.save(employee);
         // redirect: 表示重定向到一个地址  /代表当前项目路径
         // forward: 表示转发到一个地址
-        return "redirect:/simple/emps";
+        return "redirect:/emps";
     }
 
     //来到修改页面，查出当前员工，在页面回显
@@ -72,14 +71,14 @@ public class EmployeeController {
     public String updateEmployee(Employee employee){
         System.out.println("修改的员工数据："+employee);
         employeeDao.save(employee);
-        return "redirect:/simple/emps";
+        return "redirect:/emps";
     }
 
     //员工删除
     @DeleteMapping("/emp/{id}")
     public String deleteEmployee(@PathVariable("id") Integer id){
         employeeDao.delete(id);
-        return "redirect:/simple/emps";
+        return "redirect:/emps";
     }
 
 
