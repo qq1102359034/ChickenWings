@@ -21,3 +21,8 @@ emps GET
 emps PUT
 7.删除员工
 emps DELETE
+
+
+springboot错误处理机制
+
+springboot错误处理的自动配置 ErrorMVCAutoConfiguration
