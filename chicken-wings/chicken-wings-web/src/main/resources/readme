@@ -1,4 +1,12 @@
 
+Springboot快速搭建
+
+模板引擎加入
+
+拦截器配置,登录页面
+
+异常处理类
+
 RestfulCRUD: curd满足Rest风格
       普通crud(uri区分)         restfulcrud
 查询  getEmp                    emp--GET
@@ -22,7 +30,12 @@ emps PUT
 7.删除员工
 emps DELETE
 
-
+定制错误页面
 springboot错误处理机制
 
 springboot错误处理的自动配置 ErrorMVCAutoConfiguration
+通过错误处理类  BaseErrorController
+发生错误来到/error请求
+
+浏览器发生请求的请求头有accept:"text/html"
+其他客户端如:postman  accept:"**/**"
